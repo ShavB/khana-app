@@ -3,15 +3,14 @@ import DeliveryFee from "./DeliveryFee";
 import Rating from "./Rating";
 
 export default function SortFilterCommonModel({ options }) {
-  console.log(options);
   let compType = {
     bookingFeeFilter: <DeliveryFee compData={options} />,
     ratingFilter: <Rating />,
   };
 
   return (
-    <div className="bg-amber-200 absolute mt-4 ml-[-4] z-50 border-transparent shadow-2xl w-[375px] rounded-2xl">
-      <div className="m-4">
+    <div className="bg-amber-200 absolute ml-[-4] z-50 border-transparent shadow-2xl w-[375px] rounded-2xl">
+      <div className="m-2">
         <header className="flex justify-between h-[32px] m-4">
           <h1 className="text-2xl">{options.label}</h1>
           <span className="cursor-pointer">

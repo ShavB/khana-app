@@ -1,19 +1,33 @@
 import { useEffect, useState } from "react";
-import { SearchData } from "../../../utils/SearchData";
+import { searchData } from "../../../utils/SearchData";
 import { TimerReset } from "lucide-react";
 
-export default function SearchBarModel() {
+export default function SearchBarModel({
+  searchBarModalRef,
+  setShowSearchModal,
+}) {
   const [searchTabData] = useState(searchData[0].verticalSuggestionLists);
   const [tabData, setTabData] = useState(
     searchData[0].verticalSearchHomeResults.ALL
   );
 
-  // get the name of the component which is same as in object
-  // and find the same component from the array object and return it
-
   function handleSwitchTabs(componentName) {
     setTabData(searchData[0].verticalSearchHomeResults[componentName]);
   }
+
+  function closeSearchModal(e) {
+    if (
+      searchBarModalRef.current &&
+      !searchBarModalRef.current.contains(e.target)
+    ) {
+      setShowSearchModal(false);
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", closeSearchModal);
+    return () => document.addEventListener("mousedown", closeSearchModal);
+  }, []);
 
   return (
     <div className="w-[757px] ">

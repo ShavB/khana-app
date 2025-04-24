@@ -1,11 +1,14 @@
 import { Heart, Star } from "lucide-react";
 
 export default function Cards({ store }) {
-  console.log(store.image.items[0].url);
   return (
     <div className="h-[207px] w-[288px]flex flex-col rounded-2xl">
-      <div className="border-2xl">
-        <img className="border-2xl" src={store.image.items[0].url} alt="img" />
+      <div className="border-2xl h-32 w-74 overflow-hidden rounded-2xl">
+        <img
+          className="border-2xl h-[100%] w-[100%] object-cover"
+          src={store.image.items[0].url}
+          alt="img"
+        />
       </div>
       <div className="p-2">
         <div className="flex justify-between">

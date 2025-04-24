@@ -2,8 +2,6 @@ import Cards from "./Cards";
 import { useState } from "react";
 
 export default function HomeSection({ section }) {
-  //   console.log("section: ", section.stores);
-  console.log("section: ", section.header.subtitle);
   return (
     <section className="w-full flex justify-between mt-4 h-[274px] flex-col overflow-scroll">
       <div className="flex justify-between">
@@ -18,7 +16,7 @@ export default function HomeSection({ section }) {
           <Cards key={index} store={store} />
         ))}
       </div>
-      <hr />
+      <hr className="border-gray-100" />
     </section>
   );
 }
