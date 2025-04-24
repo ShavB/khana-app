@@ -1,0 +1,24 @@
+{
+  "name": "khana",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "parcel index.html --host 0.0.0.0",
+    "test": "react-scripts test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "lucide-react": "^0.503.0",
+    "parcel": "^2.14.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.4"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.0"
+  }
+}
